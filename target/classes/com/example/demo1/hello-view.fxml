@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="630.0" prefWidth="735.0" style="-fx-background-color: #212121;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.HelloController">
+   <children>
+      <Label fx:id="text" alignment="TOP_LEFT" blendMode="SRC_ATOP" contentDisplay="TOP" prefHeight="458.0" prefWidth="396.0" style="-fx-border-color: #e10d63; -fx-border-radius: 10; -fx-border-width: 0.5;" textFill="#9f9d9d" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="270.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="170.0">
+         <font>
+            <Font name="Lato Heavy" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="label2" prefHeight="21.0" prefWidth="191.0" text="Test result" textAlignment="CENTER" textFill="#e10d63" AnchorPane.leftAnchor="270.0" AnchorPane.topAnchor="130.0">
+         <font>
+            <Font name="Lato Heavy" size="18.0" />
+         </font>
+         <effect>
+            <Bloom threshold="0.25" />
+         </effect>
+      </Label>
+      <AnchorPane prefHeight="630.0" prefWidth="264.0" style="-fx-background-color: #131111;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="label1" layoutX="14.0" layoutY="129.0" prefHeight="21.0" prefWidth="191.0" text="Select a vulnerability" textAlignment="CENTER" textFill="#572fbd" AnchorPane.topAnchor="230.0">
+               <font>
+                  <Font name="Lato Heavy" size="18.0" />
+               </font>
+               <effect>
+                  <Bloom threshold="0.25" />
+               </effect>
+            </Label>
+            <Button fx:id="buttom" layoutX="67.0" layoutY="568.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="146.0" style="-fx-background-insets: 123; -fx-border-radius: 10; -fx-border-color: #e10d63;" text="Start" textOverrun="WORD_ELLIPSIS" AnchorPane.bottomAnchor="14.0">
+               <font>
+                  <Font name="Lato Heavy Italic" size="23.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="0.6226415116349003" startY="0.09905659547897606">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.3418847620487213" green="0.1843014359474182" blue="0.7404779195785522" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.04405033445964122">
+                           <color>
+                              <Color red="0.3418847620487213" green="0.1843014359474182" blue="0.7404779195785522" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.5353481562898306">
+                           <color>
+                              <Color red="0.8823529481887817" green="0.05098039284348488" blue="0.38823530077934265" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.9124568990111275">
+                           <color>
+                              <Color red="0.9686274528503418" green="0.545098066329956" blue="0.04313725605607033" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.9686274528503418" green="0.545098066329956" blue="0.04313725605607033" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+               <effect>
+                  <Bloom threshold="0.28" />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <CheckBox fx:id="info" layoutX="13.0" layoutY="170.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="236.0" text="Information about the application" textFill="#9f9d9d" AnchorPane.topAnchor="270.0">
+               <font>
+                  <Font name="Lato Heavy" size="14.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="brut" layoutX="13.0" layoutY="204.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="236.0" text="Brute-force" textFill="#9f9d9d" AnchorPane.topAnchor="300.0">
+               <font>
+                  <Font name="Lato Heavy" size="14.0" />
+               </font>
+            </CheckBox>
+            <CheckBox layoutX="13.0" layoutY="238.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="236.0" text="Cross-site scripting" textFill="#9f9d9d" AnchorPane.topAnchor="330.0" fx:id="xss">
+               <font>
+                  <Font name="Lato Heavy" size="14.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="sql" layoutX="13.0" layoutY="273.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="236.0" text="SQL-ijection" textFill="#9f9d9d" AnchorPane.topAnchor="360.0">
+               <font>
+                  <Font name="Lato Heavy" size="14.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="ddos" layoutX="13.0" layoutY="306.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="236.0" text="Ddos" textFill="#9f9d9d" AnchorPane.topAnchor="390.0">
+               <font>
+                  <Font name="Lato Heavy" size="14.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="all" layoutX="13.0" layoutY="337.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="236.0" text="All" textFill="#9f9d9d" AnchorPane.topAnchor="420.0">
+               <font>
+                  <Font name="Lato Heavy" size="14.0" />
+               </font>
+            </CheckBox>
+            <Label layoutX="11.0" layoutY="128.0" prefHeight="23.0" prefWidth="247.0" text="Enter the address" textFill="#572fbd" AnchorPane.leftAnchor="13.0" AnchorPane.topAnchor="130.0">
+               <font>
+                  <Font name="Lato Heavy" size="18.0" />
+               </font>
+               <effect>
+                  <Bloom threshold="0.25" />
+               </effect>
+            </Label>
+            <TextField fx:id="IP" layoutX="13.0" layoutY="164.0" promptText="IP or Link" AnchorPane.leftAnchor="13.0" AnchorPane.topAnchor="170.0" />
+         </children>
+      </AnchorPane>
+      <Label fx:id="logo" ellipsisString="" layoutX="145.0" layoutY="31.0" prefHeight="59.0" prefWidth="463.0" text="Scaner Web-Application" textOverrun="WORD_ELLIPSIS">
+         <font>
+            <Font name="Lato Heavy" size="38.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.09905661350376463" startY="0.22641506508063752">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.3418847620487213" green="0.1843014359474182" blue="0.7404779195785522" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.04405033445964122">
+                     <color>
+                        <Color red="0.34117648005485535" green="0.18431372940540314" blue="0.7411764860153198" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.5353481562898306">
+                     <color>
+                        <Color red="0.8823529481887817" green="0.05098039284348488" blue="0.38823530077934265" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.9124568990111275">
+                     <color>
+                        <Color red="0.9686274528503418" green="0.545098066329956" blue="0.04313725605607033" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.9686274528503418" green="0.545098066329956" blue="0.04313725605607033" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <effect>
+            <Bloom threshold="0.33" />
+         </effect>
+      </Label>
+   </children>
+</AnchorPane>

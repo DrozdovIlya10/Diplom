@@ -1,0 +1,56 @@
+<!-- SlowHTTPTest Analysis chart (c) Sergey Shekyan, Victor Agababov 2011  -->
+ <html>
+   <head>
+   <style>
+     body { font: 12px/18px "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif; background-color: transparent; color: #333; -webkit-font-smoothing: antialiased; } 
+     .slow_results {font-size: 12px; } 
+     </style>
+     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+     <script type="text/javascript">
+       google.load("visualization", "1", {packages:["corechart"]});
+       google.setOnLoadCallback(drawChart);
+       function drawChart() {
+         var data = new google.visualization.DataTable();
+         data.addColumn('string', 'Seconds');
+         data.addColumn('number', 'Closed');
+         data.addColumn('number', 'Pending');
+         data.addColumn('number', 'Connected');
+         data.addColumn('number', 'Service available');
+         data.addRows([
+['0',0,1,0,20000],
+['1',0,2,155,20000],
+['2',0,2,305,20000],
+['3',0,2,457,20000],
+['4',0,2,608,20000],
+['5',0,2,756,20000],
+['6',0,2,903,20000],
+['7',0,2,1046,20000],
+['8',0,2,1190,20000],
+['9',0,2,1328,20000],
+['10',0,1,1466,20000],
+['11',0,1,1583,20000],
+['12',0,1,1721,20000],
+['13',0,1,1856,20000],
+['14',0,1,1989,20000],
+['15',0,1,2117,20000],
+['16',0,1,2250,20000],
+['17',0,1,2379,20000],
+['18',0,1,2510,20000],
+['19',0,1,2637,20000],
+['20',0,1,2767,20000],
+['21',0,1,2863,20000],
+['10871',0,1,2906,20000],
+        ]);
+         var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+         chart.draw(data, {'width': 600, 'height': 360, 'title': 'Test results against http://192.168.0.14/error',         hAxis: {'title': 'Seconds', 'titleTextStyle': {color: '#FF0000'}},
+         vAxis: {'title': 'Connections', 'titleTextStyle': {color: '#FF0000'}, 'viewWindowMode':'maximized'}
+     });
+     }
+     </script>
+     <title>SlowHTTPTest(tm) Connection Results</title>
+   </head>
+   <body>
+   <p><table class='slow_results' border='0'><tr><th>Test parameters</th></tr><tr><td><b>Test type</b></td><td>SLOW HEADERS</td></tr><tr><td><b>Number of connections</b></td><td>20000</td></tr><tr><td><b>Verb</b></td><td>POST</td></tr><tr><td><b>Content-Length header value</b></td><td>4096</td></tr><tr><td><b>Cookie</b></td><td></td></tr><tr><td><b>Extra data max length</b></td><td>52</td></tr><tr><td><b>Interval between follow up data</b></td><td>10 seconds</td></tr><tr><td><b>Connections per seconds</b></td><td>200</td></tr><tr><td><b>Timeout for probe connection</b></td><td>2</td></tr><tr><td><b>Target test duration</b></td><td>240 seconds</td></tr><tr><td><b>Using proxy</b></td><td>no proxy  </td></tr></table></p>
+     <div id="chart_div"></div>
+   </body>
+ </html>
